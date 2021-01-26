@@ -1,7 +1,7 @@
 {
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/api/alumnos/{id}",
+      "DownstreamPathTemplate": "/api/alumnos/{t}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 44300
         }
       ],
-      "UpstreamPathTemplate": "/api/alumnos/{id}",
+      "UpstreamPathTemplate": "/api/alumnos/{t}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
