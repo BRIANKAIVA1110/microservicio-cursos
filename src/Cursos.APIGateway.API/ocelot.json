@@ -1,0 +1,99 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/alumnos/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44300
+        }
+      ],
+      "UpstreamPathTemplate": "/api/alumnos/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/alumnos",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44300
+        }
+      ],
+      "UpstreamPathTemplate": "/api/alumnos",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration",
+    //"BaseUrl": "https://localhost:44394"
+  }
+}
+
+
+
+//{
+//  "ReRoutes": [
+//    {
+//      "DownstreamPathTemplate": "/api/alumnos/{everything}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 44300
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/api/alumnos/{everything}",
+//      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+//    },
+//    {
+//      "DownstreamPathTemplate": "/api/cursos/{everything}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 44356
+//        },
+//        {
+//          "Host": "localhost",
+//          "Port": 55394
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/api/cursos/{everything}",
+//      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+//    }
+//  ],
+//  "GlobalConfiguration": {
+//    "RequestIdKey": "OcRequestId",
+//    "AdministrationPath": "/administration"
+//  }
+//}
+
+
+/*EJEMPLO REROUTES con uso de EUREKA, ESTE TOMA EL HOST Y PUERTO DE EUREKA: */
+//"ReRoutes": [
+  //{
+  //  "DownstreamPathTemplate": "/api/Alumnos/{everything}",
+  //  "DownstreamScheme": "http",
+  //  "UpstreamPathTemplate": "/api/Alumnos/{everything}",
+  //  "ServiceName": "AlumnoService",
+  //  "DownstreamHostAndPorts": [
+  //    {
+  //      "Host": "localhost",
+  //      "Port": 44300
+  //    }
+  //  ],
+  //  "UpstreamHttpMethod": [ "Get" ],
+  //  "FileCacheOptions": { "TtlSeconds": 15 },
+  //  "AuthenticationOptions": {
+  //    //"AuthenticationProviderKey": "ApiSecurity",
+  //    "AllowedScopes": []
+  //  },
+  //  "RouteClaimsRequirement": {
+  //    //"userType": "SALESMAN"
+  //  }
+  //},
+//],
