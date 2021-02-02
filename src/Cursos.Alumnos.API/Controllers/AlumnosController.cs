@@ -22,6 +22,7 @@ namespace Cursos.Alumnos.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            var a = this.HttpContext;
             return Ok(new { msg = "oki doki servicio alumnos" });
         }
         [HttpGet("{id}")]

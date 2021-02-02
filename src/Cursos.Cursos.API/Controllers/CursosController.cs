@@ -11,7 +11,7 @@ namespace Cursos.Cursos.API.Controllers
     [Route("api/[controller]")]
     public class CursosController : ControllerBase
     {
-      
+
 
         private readonly ILogger<CursosController> _logger;
 
@@ -24,6 +24,11 @@ namespace Cursos.Cursos.API.Controllers
         public IActionResult Get()
         {
             return Ok(new { msg = "oki doki servicio cursos" });
+        }
+        [HttpGet("{id}")]
+        public IActionResult Get([FromRoute] int id)
+        {
+            return Ok(new { msg = $"oki doki servicio cursos {id} " });
         }
     }
 }

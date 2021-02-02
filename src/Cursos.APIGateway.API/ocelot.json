@@ -1,6 +1,8 @@
 {
   "ReRoutes": [
     {
+      /*route AlumnoService*/
+      //"ServiceName": "AlumnoService", /*solo si se usa eureka o algo por el estilo*/
       "DownstreamPathTemplate": "/api/alumnos/{t}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -9,10 +11,12 @@
           "Port": 44300
         }
       ],
-      "UpstreamPathTemplate": "/api/alumnos/{t}",
+      "UpstreamPathTemplate": "/api/alumnos/{t}", /*template segun expuesto por el api gateway para luego invocar el DownstreamPathTemplate*/
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
+      /*route AlumnoService*/
+      //"ServiceName": "AlumnoService", /*solo si se usa eureka o algo por el estilo*/
       "DownstreamPathTemplate": "/api/alumnos",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -23,6 +27,34 @@
       ],
       "UpstreamPathTemplate": "/api/alumnos",
       "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      /*route CursosService*/
+      //"ServiceName": "AlumnoService", /*solo si se usa eureka o algo por el estilo*/
+      "DownstreamPathTemplate": "/api/cursos/{t}", /*template segun expuesto por el backend*/
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44356
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cursos/{t}", /*template segun expuesto por el api gateway para luego invocar el DownstreamPathTemplate*/
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      /*route CursosService*/
+      //"ServiceName": "AlumnoService", /*solo si se usa eureka o algo por el estilo*/
+      "DownstreamPathTemplate": "/api/cursos",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44356
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cursos",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
     },
 
   ],

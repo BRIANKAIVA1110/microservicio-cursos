@@ -37,3 +37,4 @@ C:\Users\GAUSS-01\Desktop\microservicios-cursos\src\Cursos.Cursos.API\obj\Debug\
 C:\Users\GAUSS-01\Desktop\microservicios-cursos\src\Cursos.Cursos.API\obj\Debug\netcoreapp3.1\Cursos.Cursos.API.dll
 C:\Users\GAUSS-01\Desktop\microservicios-cursos\src\Cursos.Cursos.API\obj\Debug\netcoreapp3.1\Cursos.Cursos.API.pdb
 C:\Users\GAUSS-01\Desktop\microservicios-cursos\src\Cursos.Cursos.API\obj\Debug\netcoreapp3.1\Cursos.Cursos.API.genruntimeconfig.cache
+C:\Users\GAUSS-01\Desktop\microservicios-cursos\src\Cursos.Cursos.API\obj\Debug\netcoreapp3.1\Cursos.Cursos.API.csprojAssemblyReference.cache
